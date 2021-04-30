@@ -8,9 +8,8 @@ function App() {
   const [keyword, setKeyword] = useState("");
   const [error, countries] = useCountries(keyword);
 
-  const handleChange = (event) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setKeyword(event.target.value);
-    //console.log(keyword);
   }
   
   return (

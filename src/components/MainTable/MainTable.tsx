@@ -3,8 +3,13 @@ import TableHeader from "../TableHeader/TableHeader";
 import TableRow from "../TableRow/TableRow";
 import Table from 'react-bootstrap/Table';
 import "./maintable.css";
+import {Country} from "../../types";
 
-function MainTable({countries}) {
+type MainTableProps = {
+  countries: Country[]
+}
+
+function MainTable({countries}: MainTableProps) {
   return (
     <div className="container">
     <Table striped bordered hover>
@@ -13,7 +18,7 @@ function MainTable({countries}) {
         {countries.map(country => (
           <TableRow 
           key={country.name}
-          flagUrl={country.flag}
+          flag={country.flag}
           name={country.name}
           population={country.population}
           languages={country.languages}

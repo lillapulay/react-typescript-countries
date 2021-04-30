@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from "react";
+import {Country} from "../types";
 
-export default function useCountries(keyword) {
+export default function useCountries(keyword: string): [Error | null, Country[]] {
   
-  const [ countries, setCountries ] = useState([]);
+  const [ countries, setCountries ] = useState<Country[]>([]);
   const [ error, setError ] = useState(null);
-  const [ filteredCountries, setFilteredCountries ] = useState([]);
+  const [ filteredCountries, setFilteredCountries ] = useState<Country[]>([]);
 
   async function fetchData() {
     try {
@@ -22,13 +23,12 @@ export default function useCountries(keyword) {
   }, []);
 
   useEffect(()=> {
-      let filteredData = countries.filter((country) => {
+      let filteredData = countries.filter((country) => { // Make Country optional if throws error
         return (country.name
         .toLowerCase()
         .search(keyword
           .toLowerCase()) !== -1 || 
-          country.nativeName
-          .toLowerCase()
+          country.nativeName?.toLowerCase()
           .search(keyword
             .toLowerCase()) !== -1);
       });
