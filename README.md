@@ -1,3 +1,19 @@
+# React-TypeScript Countries App
+
+React app created by create-react-app, utilizing React Router (for user details page), fetching data from an [external API (users)](https://jsonplaceholder.typicode.com/). Updated with TypeScript. 
+
+### To-do:
+- [ ] Patch up styling
+- [ ] Add search option for languages
+- [ ] Implement filtering per: name, population, region
+- [ ] Format population
+- [ ] Implement React Router - display country details in separate component
+- [ ] Check error handling
+- [ ] Host
+- [ ] Add demo image
+
+See this Integrify assignment's details below.
+***
 # React assignment
 
 Work individually to finish this assignment. You can ask for help from your pair mate, other class mates or instructors
