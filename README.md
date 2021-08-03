@@ -1,6 +1,6 @@
 # React-TypeScript Countries App
 
-React app created by create-react-app, utilizing React Router (for user details page), fetching data from the [REST Countries API](https://restcountries.eu/). Updated with TypeScript. 
+React app created by create-react-app, utilizing React Router and Redux, fetching data from the [REST Countries API](https://restcountries.eu/). Updated with TypeScript. 
 
 ### To-do:
 - [ ] Patch up styling
